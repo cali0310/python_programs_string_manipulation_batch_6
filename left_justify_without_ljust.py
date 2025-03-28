@@ -4,3 +4,10 @@
 # If the length is less than width
 # Append (width - length) spaces to string
 # Print the left-justified string
+
+def custom_ljust(string, width):
+    return string + ' ' * max(0, width - len(string))
+
+statement = input("Enter statement: ")
+width = int(input("Enter total width: "))
+print(f'"{custom_ljust(statement, width)}"')
